@@ -1235,6 +1235,380 @@
             background: var(--primary-green);
         }
 
+        /* BFCM Promotion Banner */
+        .promo-banner {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            text-align: center;
+            padding: 1rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .promo-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .promo-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        .promo-badge {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .promo-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .promo-discount {
+            color: #ffd700;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .countdown-timer {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 60px;
+        }
+
+        .countdown-number {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ffd700;
+            line-height: 1;
+        }
+
+        .countdown-label {
+            font-size: 0.75rem;
+            color: #ccc;
+            margin-top: 0.3rem;
+        }
+
+        .countdown-separator {
+            font-size: 1.5rem;
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            min-height: 600px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            overflow: hidden;
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            animation: fadeInLeft 1s ease-out;
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--dark-gray);
+        }
+
+        .hero-title .highlight {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .hero-features {
+            display: flex;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .hero-feature-icon {
+            font-size: 1.5rem;
+        }
+
+        .hero-feature-text {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--dark-gray);
+        }
+
+        .hero-price {
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .hero-price-current {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary-blue);
+        }
+
+        .hero-price-original {
+            font-size: 1.5rem;
+            text-decoration: line-through;
+            color: #999;
+        }
+
+        .hero-price-save {
+            background: #ff4444;
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .btn-hero-primary {
+            padding: 1.2rem 3rem;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(44, 126, 208, 0.3);
+        }
+
+        .btn-hero-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(44, 126, 208, 0.5);
+        }
+
+        .btn-hero-secondary {
+            padding: 1.2rem 3rem;
+            background: white;
+            color: var(--dark-gray);
+            border: 2px solid var(--border-gray);
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-hero-secondary:hover {
+            border-color: var(--primary-blue);
+            color: var(--primary-blue);
+        }
+
+        .hero-image {
+            position: relative;
+            animation: fadeInRight 1s ease-out;
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.2));
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-gray);
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-blue);
+        }
+
+        .hero-stat-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .promo-content {
+                gap: 1rem;
+            }
+
+            .promo-text {
+                font-size: 1rem;
+            }
+
+            .promo-discount {
+                font-size: 1.2rem;
+            }
+
+            .countdown-number {
+                font-size: 1.3rem;
+            }
+
+            .countdown-item {
+                min-width: 45px;
+            }
+
+            .hero-section {
+                min-height: auto;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 2rem 1rem;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .hero-features {
+                gap: 1rem;
+            }
+
+            .hero-price-current {
+                font-size: 2rem;
+            }
+
+            .hero-price-original {
+                font-size: 1.2rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .btn-hero-primary,
+            .btn-hero-secondary {
+                width: 100%;
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+
         @media (max-width: 768px) {
             .cart-item {
                 grid-template-columns: 80px 1fr;
@@ -1279,6 +1653,101 @@
             </div>
         </div>
     </nav>
+
+    <!-- BFCM Promotion Banner -->
+    <section class="promo-banner">
+        <div class="promo-content">
+            <div class="promo-badge">🔥 BLACK FRIDAY SALE</div>
+            <div class="promo-text">Nov 20th - Dec 1st</div>
+            <div class="promo-discount">Up to 70% OFF</div>
+            <div class="countdown-timer" id="countdownTimer">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">00</div>
+                    <div class="countdown-label">DAYS</div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div class="countdown-label">HOURS</div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div class="countdown-label">MINS</div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">00</div>
+                    <div class="countdown-label">SECS</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">⚡ BESTSELLER - Save $320</div>
+                <h1 class="hero-title">
+                    <span class="highlight">32 Hours</span> of Fridge Backup<br>
+                    Power Freedom Anywhere
+                </h1>
+                <p class="hero-subtitle">
+                    Anker SOLIX C2000 Gen 2 - The perfect balance of power, portability, and price. Keep your essentials running during outages, camping trips, and adventures.
+                </p>
+
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <div class="hero-feature-icon">⚡</div>
+                        <div class="hero-feature-text">2048Wh Capacity</div>
+                    </div>
+                    <div class="hero-feature">
+                        <div class="hero-feature-icon">🔌</div>
+                        <div class="hero-feature-text">2000W Output</div>
+                    </div>
+                    <div class="hero-feature">
+                        <div class="hero-feature-icon">⏱️</div>
+                        <div class="hero-feature-text">1.5hrs Fast Charge</div>
+                    </div>
+                </div>
+
+                <div class="hero-price">
+                    <div class="hero-price-current">$679</div>
+                    <div class="hero-price-original">$999</div>
+                    <div class="hero-price-save">Save 32%</div>
+                </div>
+
+                <div class="hero-cta">
+                    <button class="btn-hero-primary" onclick="addToCart('C2000'); setTimeout(() => closeModal(), 1500);">
+                        🛒 Add to Cart - $679
+                    </button>
+                    <button class="btn-hero-secondary" onclick="document.getElementById('products').scrollIntoView({ behavior: 'smooth' });">
+                        View All Products
+                    </button>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">170x</div>
+                        <div class="hero-stat-label">Phone Charges</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">32hrs</div>
+                        <div class="hero-stat-label">Fridge Runtime</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">3000+</div>
+                        <div class="hero-stat-label">Cycle Life</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="https://cdn.shopify.com/s/files/1/0887/1798/4111/files/SC01-_00239_3_3840x.png?v=1760352270" alt="Anker SOLIX C2000 Gen 2" onerror="this.src='https://cdn.shopify.com/s/files/1/0854/3820/2186/files/A1783-US.png?v=1761548982'">
+            </div>
+        </div>
+    </section>
 
     <!-- Triple Navigation Area -->
     <section class="triple-nav fade-in">
@@ -1838,6 +2307,38 @@
     </div>
 
     <script>
+        // Countdown Timer for BFCM
+        function initCountdown() {
+            // Set end date to December 1st, 2024, 23:59:59
+            const endDate = new Date('December 1, 2024 23:59:59').getTime();
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = endDate - now;
+
+                if (distance < 0) {
+                    document.getElementById('days').textContent = '00';
+                    document.getElementById('hours').textContent = '00';
+                    document.getElementById('minutes').textContent = '00';
+                    document.getElementById('seconds').textContent = '00';
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = String(days).padStart(2, '0');
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            }
+
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        }
+
         // Shopping Cart Management
         let cart = JSON.parse(localStorage.getItem('ankerCart')) || [];
 
@@ -2100,9 +2601,10 @@
             showModal(content);
         }
 
-        // Initialize cart on page load
+        // Initialize cart and countdown on page load
         document.addEventListener('DOMContentLoaded', function() {
             updateCartCount();
+            initCountdown();
         });
 
         // Modal Functions
