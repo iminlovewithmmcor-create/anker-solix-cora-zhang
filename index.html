@@ -114,7 +114,7 @@
         /* Triple Navigation */
         .triple-nav {
             background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-            padding: 3rem 2rem;
+            padding: 2.5rem 2rem;
         }
 
         .triple-nav-container {
@@ -1333,21 +1333,54 @@
         /* Hero Section */
         .hero-section {
             position: relative;
-            min-height: 600px;
+            min-height: 500px;
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             overflow: hidden;
+            padding-top: 2rem;
         }
 
         .hero-container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 4rem 2rem;
+            padding: 2rem 2rem 3rem;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 3rem;
             align-items: center;
             position: relative;
             z-index: 1;
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            padding: 1.5rem 2rem;
+            background: white;
+            border-bottom: 1px solid var(--border-gray);
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .trust-badge-icon {
+            font-size: 1.5rem;
+        }
+
+        .trust-badge-text {
+            font-weight: 500;
+        }
+
+        .trust-badge strong {
+            color: var(--dark-gray);
+            font-weight: 600;
         }
 
         .hero-content {
@@ -1377,10 +1410,10 @@
         }
 
         .hero-title {
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: bold;
             line-height: 1.2;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             color: var(--dark-gray);
         }
 
@@ -1392,16 +1425,16 @@
         }
 
         .hero-subtitle {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             color: #666;
             margin-bottom: 1rem;
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
         .hero-features {
             display: flex;
-            gap: 2rem;
-            margin: 2rem 0;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
             flex-wrap: wrap;
         }
 
@@ -1425,7 +1458,7 @@
             display: flex;
             align-items: baseline;
             gap: 1rem;
-            margin: 2rem 0;
+            margin: 1.5rem 0;
         }
 
         .hero-price-current {
@@ -1452,7 +1485,7 @@
         .hero-cta {
             display: flex;
             gap: 1rem;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
         }
 
         .btn-hero-primary {
@@ -1521,9 +1554,9 @@
         .hero-stats {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-            padding-top: 2rem;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
             border-top: 1px solid var(--border-gray);
         }
 
@@ -1564,8 +1597,22 @@
                 min-width: 45px;
             }
 
+            .trust-badges {
+                gap: 1.5rem;
+                padding: 1rem;
+            }
+
+            .trust-badge {
+                font-size: 0.85rem;
+            }
+
+            .trust-badge-icon {
+                font-size: 1.2rem;
+            }
+
             .hero-section {
                 min-height: auto;
+                padding-top: 1rem;
             }
 
             .hero-container {
@@ -1683,6 +1730,26 @@
                     <div class="countdown-label">SECS</div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="trust-badges">
+        <div class="trust-badge">
+            <div class="trust-badge-icon">🚚</div>
+            <div class="trust-badge-text"><strong>FREE</strong> Shipping</div>
+        </div>
+        <div class="trust-badge">
+            <div class="trust-badge-icon">🔄</div>
+            <div class="trust-badge-text"><strong>30-Day</strong> Returns</div>
+        </div>
+        <div class="trust-badge">
+            <div class="trust-badge-icon">⭐</div>
+            <div class="trust-badge-text"><strong>4.8/5</strong> Rating (12K+ Reviews)</div>
+        </div>
+        <div class="trust-badge">
+            <div class="trust-badge-icon">🛡️</div>
+            <div class="trust-badge-text"><strong>5-Year</strong> Warranty</div>
         </div>
     </section>
 
